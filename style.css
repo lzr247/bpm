@@ -190,6 +190,30 @@ body {
   box-shadow: 4px 4px 0px 0px #000000;
 }
 
+.sound-control {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-sound {
+  background: #95e1d3;
+  color: #000000;
+  box-shadow: 8px 8px 0px 0px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-sound.muted {
+  background: #f38181;
+}
+
+.sound-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
 @media (max-width: 768px) {
   body {
     padding: 15px;
