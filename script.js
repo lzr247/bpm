@@ -48,6 +48,7 @@ class BPMMetronome {
 
   updateBPMDisplay() {
     this.bpmValueEl.textContent = this.bpm;
+    this.bpmSlider.setAttribute('aria-valuenow', this.bpm);
   }
 
   calculateBeatInterval() {
@@ -156,11 +157,13 @@ class BPMMetronome {
     this.soundEnabled = !this.soundEnabled;
     
     if (this.soundEnabled) {
-      this.soundToggleBtn.innerHTML = '<span class="sound-icon">🔊</span> SOUND ON';
+      this.soundToggleBtn.innerHTML = '<span class="sound-icon" aria-hidden="true">🔊</span> SOUND ON';
       this.soundToggleBtn.classList.remove("muted");
+      this.soundToggleBtn.setAttribute('aria-pressed', 'true');
     } else {
-      this.soundToggleBtn.innerHTML = '<span class="sound-icon">🔇</span> SOUND OFF';
+      this.soundToggleBtn.innerHTML = '<span class="sound-icon" aria-hidden="true">🔇</span> SOUND OFF';
       this.soundToggleBtn.classList.add("muted");
+      this.soundToggleBtn.setAttribute('aria-pressed', 'false');
     }
   }
 }

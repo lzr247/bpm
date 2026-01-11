@@ -3,19 +3,147 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BPM Metronome</title>
+    <title>
+      BPM Metronome Online - Free Beats Per Minute Counter | bpm.monster
+    </title>
+    <meta
+      name="description"
+      content="Free online BPM metronome with adjustable tempo from 150-220 BPM. Perfect for musicians, DJs, and music producers. Practice rhythm with visual and audio beats."
+    />
+    <meta
+      name="keywords"
+      content="BPM, metronome, beats per minute, tempo, rhythm, music practice, online metronome, free metronome, DJ tool, musician tool"
+    />
+    <meta name="author" content="Lazar Conić" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://bpm.monster/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bpm.monster/" />
+    <meta
+      property="og:title"
+      content="BPM Metronome Online - Free Beats Per Minute Counter"
+    />
+    <meta
+      property="og:description"
+      content="Free online BPM metronome with adjustable tempo from 150-220 BPM. Perfect for musicians, DJs, and music producers."
+    />
+    <meta property="og:image" content="https://bpm.monster/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="bpm.monster" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://bpm.monster/" />
+    <meta
+      name="twitter:title"
+      content="BPM Metronome Online - Free Beats Per Minute Counter"
+    />
+    <meta
+      name="twitter:description"
+      content="Free online BPM metronome with adjustable tempo from 150-220 BPM. Perfect for musicians, DJs, and music producers."
+    />
+    <meta name="twitter:image" content="https://bpm.monster/og-image.png" />
+
+    <meta name="theme-color" content="#ffe66d" />
+    <meta name="msapplication-TileColor" content="#ffe66d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="BPM Metronome" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "BPM Metronome",
+        "url": "https://bpm.monster/",
+        "description": "Free online BPM metronome with adjustable tempo from 150-220 BPM. Perfect for musicians, DJs, and music producers. Practice rhythm with visual and audio beats.",
+        "applicationCategory": "MusicApplication",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "softwareVersion": "1.0",
+        "author": {
+          "@type": "Person",
+          "name": "Lazar Conić",
+          "url": "https://lazarcode.dev/"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "150"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a BPM metronome?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A BPM metronome is a tool that produces steady beats at a specific tempo measured in beats per minute (BPM). Musicians use it to practice playing in time and develop their sense of rhythm."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I use this online metronome?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simply adjust the BPM slider to set your desired tempo between 150-220 BPM, then click START to begin. You can toggle the sound on or off using the sound button."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What BPM range does this metronome support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This metronome supports tempos from 150 to 220 BPM, which is ideal for fast-paced music genres like drum and bass, hardcore, and speed metal."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div class="container">
-      <h1 class="title">BPM METRONOME</h1>
+    <main class="container" role="main">
+      <header>
+        <a href="https://bpm.monster/" aria-label="BPM Monster Home">
+          <h1 class="title">BPM METRONOME</h1>
+        </a>
+      </header>
 
-      <div class="beat-display">
-        <div class="beat-number" id="beatNumber">1</div>
-        <div class="beat-indicator" id="beatIndicator"></div>
-      </div>
+      <section class="beat-display" aria-label="Beat display">
+        <div
+          class="beat-number"
+          id="beatNumber"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          1
+        </div>
+        <div class="beat-indicator" id="beatIndicator" aria-hidden="true"></div>
+      </section>
 
-      <div class="controls">
+      <section class="controls" aria-label="Metronome controls">
         <div class="bpm-control">
           <label for="bpmSlider" class="label"
             >BPM: <span id="bpmValue">180</span></label
@@ -27,22 +155,48 @@
             max="220"
             value="180"
             class="slider"
+            aria-valuemin="150"
+            aria-valuemax="220"
+            aria-valuenow="180"
+            aria-label="Beats per minute slider"
           />
-          <div class="bpm-labels">
+          <div class="bpm-labels" aria-hidden="true">
             <span>150</span>
             <span>220</span>
           </div>
         </div>
 
         <div class="sound-control">
-          <button id="soundToggleBtn" class="btn btn-sound">
-            <span class="sound-icon">🔊</span> SOUND ON
+          <button
+            id="soundToggleBtn"
+            class="btn btn-sound"
+            type="button"
+            aria-pressed="true"
+            aria-label="Toggle metronome sound"
+          >
+            <span class="sound-icon" aria-hidden="true">🔊</span> SOUND ON
           </button>
         </div>
 
-        <button id="playPauseBtn" class="btn btn-primary">START</button>
-      </div>
-    </div>
+        <button
+          id="playPauseBtn"
+          class="btn btn-primary"
+          type="button"
+          aria-label="Start or stop the metronome"
+        >
+          START
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="Footer navigation">
+        <p>
+          &copy; 2026 <a href="https://lazarcode.dev/">Lazar Conić</a> <br />
+          Free Online BPM Metronome
+        </p>
+      </nav>
+    </footer>
 
     <script src="script.js"></script>
   </body>

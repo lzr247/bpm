@@ -1,0 +1,24 @@
+{
+  "name": "BPM Metronome",
+  "short_name": "BPM",
+  "description": "Free online BPM metronome with adjustable tempo. Perfect for musicians, DJs, and music producers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffe66d",
+  "theme_color": "#ffe66d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
